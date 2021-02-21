@@ -1,18 +1,6 @@
 %Numero a letra
 
-%letra(CM,DM,UM,CM,DM,UM,C,D,U)
-mainLetra :-
-write('Escriba un numero'),nl,
-write('CM: '),read(A),nl,
-write('DM: '),read(B),nl,
-write('UM: '),read(C),nl,
-write('CM: '),read(D),nl,
-write('DM: '),read(E),nl,
-write('UM: '),read(F),nl,
-write('C: '),read(G),nl,
-write('D: '),read(H),nl,
-write('U: '),read(I),nl,
-letra(A,B,C,D,E,F,G,H,I).
+%letra(MLC,MLD,MLU,MC,MD,MU,C,D,U)
 
 letra(9,0,0,0,0,0,0,0,0):-	
 	write('novecientos millones '),!.
@@ -130,10 +118,8 @@ letra(0,9,MLU,MC,MD,MU,C,D,U):-
 	write('noventa y '),
 	letra(0,0,MLU,MC,MD,MU,C,D,U),!.
 
-letra(0,0,1,0,0,0,0,0,0):-
-	write('un millon'),!.
 
-letra(0,0,0,MC,MD,MU,C,D,U):-
+letra(0,0,1,MC,MD,MU,C,D,U):-
 	write('un millones '),letra(0,0,0,MC,MD,MU,C,D,U),!.
 letra(0,0,2,MC,MD,MU,C,D,U):-
 	write('dos millones '),letra(0,0,0,MC,MD,MU,C,D,U),!.
@@ -157,7 +143,7 @@ letra(0,0,0,1,0,0,0,0,0):-
 	write('cien mil '),!.
 
 letra(0,0,0,1,0,0,C,D,U):-
-	write('ciento un mil '),
+	write('cien mil '),
 	letra(0,0,0,0,0,0,C,D,U),!.
 letra(0,0,0,1,MD,MU,C,D,U):-
 	write('ciento '),
@@ -271,7 +257,7 @@ letra(0,0,0,0,9,MU,C,D,U):-
 
 
 letra(0,0,0,0,0,1,C,D,U):-
-	write('mil '),letra(0,0,0,0,0,0,C,D,U),!.
+	write('un mil '),letra(0,0,0,0,0,0,C,D,U),!.
 letra(0,0,0,0,0,2,C,D,U):-
 	write('dos mil '),letra(0,0,0,0,0,0,C,D,U),!.
 letra(0,0,0,0,0,3,C,D,U):-
