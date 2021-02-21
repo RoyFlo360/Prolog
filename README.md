@@ -1,2 +1,3 @@
-# PrologITQ
+# Prolog
+
 Programacion Logica Y Funcional 
